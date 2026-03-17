@@ -1,0 +1,57 @@
+{
+  "$schema": "https://mission-control.yzli.io/schemas/manifest-v1.json",
+
+  "id": "yzli/calendar",
+  "name": "Calendar & Scheduler",
+  "version": "1.0.0",
+  "description": "Agenda et scheduler — gestion des tâches planifiées, crons, et tâches récurrentes par agent.",
+
+  "author": {
+    "name": "Yzli Studio",
+    "email": "dev@yzli.io",
+    "url": "https://yzli.io"
+  },
+
+  "license": "MIT",
+  "repository": "https://github.com/yzli-agency/mc-module-calendar.git",
+
+  "runtime": {
+    "python": ">=3.11",
+    "mission_control": ">=2.0.0"
+  },
+
+  "dependencies": {},
+
+  "visibility": "team",
+
+  "entrypoints": {
+    "api": "backend.routes:router",
+    "dashboard": "frontend/view.js"
+  },
+
+  "hooks": {
+    "install": "install.sh"
+  },
+
+  "migrations": {
+    "enabled": true,
+    "path": "migrations/"
+  },
+
+  "nav_item": {
+    "label": "Agenda",
+    "icon": "ph-calendar",
+    "view_id": "calendar",
+    "sort_order": 5
+  },
+
+  "permissions": [
+    "calendar.read",
+    "calendar.write",
+    "calendar.delete"
+  ],
+
+  "tags": ["calendar", "scheduler", "cron"],
+
+  "keywords": ["calendar", "agenda", "scheduler", "cron", "tâches récurrentes"]
+}

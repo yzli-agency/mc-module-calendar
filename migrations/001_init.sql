@@ -1,0 +1,2 @@
+-- Migrations managed by core-v2 db.py
+-- Tables are created in the main db.py migration
